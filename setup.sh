@@ -104,14 +104,14 @@ chmod +x /usr/local/bin/bbb-install.sh
 
 # wget -qO- https://ubuntu.bigbluebutton.org/bbb-install.sh | bash -s -- -w -g -v xenial-22 -s ${DOMAIN} -e ${EMAIL} -c ${TURNDOMAINSECRET}
 
+curl -o /usr/local/bin/setup-user.sh https://raw.githubusercontent.com/jgerhold/bbb-hetzner-cloud/main/setup-user.sh
+chmod +x /usr/local/bin/setup-user.sh
+
 curl -o /usr/local/bin/bbb-config.sh https://raw.githubusercontent.com/jgerhold/bbb-hetzner-cloud/main/bbb-config.sh
 chmod +x /usr/local/bin/bbb-config.sh
 
 /usr/local/bin/bbb-config.sh --admin-name ${ADMINNAME} --admin-email ${ADMINEMAIL} --admin-password ${ADMINPW}
 fi
-
-curl -o /usr/local/bin/setup-user.sh https://raw.githubusercontent.com/jgerhold/bbb-hetzner-cloud/main/setup-user.sh
-chmod +x /usr/local/bin/setup-user.sh
 
 # sudo bbb-conf --check
 # sudo bbb-conf --setip ${DOMAIN}
