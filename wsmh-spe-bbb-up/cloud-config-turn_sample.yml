@@ -1,0 +1,4 @@
+#cloud-config
+
+runcmd:
+  - curl -s https://raw.githubusercontent.com/jgerhold/bbb-hetzner-cloud/main/setup-turn.sh | bash -s -- --email <email> --turn <domain> --turn-domain-secret "<domain>:<secret>" --spdns-token4 <spdns IPV4 token> --spdns-token6 <spdns IPV6 token> >>setup.log 2>&1

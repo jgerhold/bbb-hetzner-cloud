@@ -1,0 +1,4 @@
+#cloud-config
+
+runcmd:
+  - curl -s https://raw.githubusercontent.com/jgerhold/bbb-hetzner-cloud/main/setup.sh | bash -s -- --hcloud-token <token> --domain <domain> --email <email> --admin-name "<adminname>" --admin-email "<adminemail>" --admin-password "<admin-password>" --turn-domain-secret "<domain>:<secret>" --floating-ips <ip-name-prefix> >>setup.log 2>&1
